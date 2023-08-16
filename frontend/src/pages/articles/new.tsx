@@ -10,6 +10,7 @@ const [summary, setSummary] = useState("");
 const [linkedDiscussion, setLinkedDiscussion] = useState("");
 const submitNewArticle = async (event: FormEvent<HTMLFormElement>) => {
 event.preventDefault();
+
 console.log(
     JSON.stringify({
     title,
@@ -36,6 +37,7 @@ console.log(
     })
     );
     };
+    // return the full form
 
     return (
         <div className="container">
@@ -56,9 +58,7 @@ console.log(
         {authors.map((author, index) => {
         return (
         <div key={`author ${index}`} className={formStyles.arrayItem}>
-
-
-<input
+        <input
 type="text"
 name="author"
 value={author}
